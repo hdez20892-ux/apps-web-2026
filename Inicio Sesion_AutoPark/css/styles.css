@@ -1,7 +1,7 @@
 /* Configuración general */
 body {
     font-family: Arial, sans-serif;
-    background-color: #E4EBF7; /* Fondo azul muy claro */
+    background-color: #E4EBF7; 
     margin: 0;
     padding: 0;
 }
@@ -16,11 +16,10 @@ header {
 
 /* Control de tamaño para el logo (Ajuste del logo) */
 header img {
-    max-width: 100px; /* Tamaño controlado del logo */
+    max-width: 100px; 
     height: auto;
     display: block;
-    margin: 0 auto 10px auto; /* Lo centra y le da separación inferior */
-}
+    margin: 0 auto 10px auto; 
 
 /* Menú de navegación */
 nav ul {
