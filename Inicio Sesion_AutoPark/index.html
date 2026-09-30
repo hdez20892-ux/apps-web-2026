@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Sistema Web de Gestión</title>
+
+    <!-- 1. Carga de CSS de Bootstrap 5.0 vía CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- 2. Vinculación con tu hoja de estilos CSS personalizada (sobrescribe reglas si es necesario) -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Ícono de la pestaña (Favicon) -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- Encabezado principal: Componente Navbar de Bootstrap -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <!-- Marca / Logotipo -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <img src="assets/img/logo.jpeg" alt="Logotipo del Sistema" width="30" height="30" class="d-inline-block align-text-top rounded">
+                    <span>Sistema Web de Gestión</span>
+                </a>
+
+                <!-- Botón Toggle para pantallas pequeñas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Soporte</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal con sistema de Contenedores, Filas y Columnas -->
+    <main class="container my-auto py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-5">
+
+                <!-- Componente Alert (Ejemplo informativo) -->
+                <div class="alert alert-info alert-dismissible fade show mb-4" role="alert">
+                    <strong>¡Bienvenido!</strong> Asegúrate de verificar tus datos antes de continuar.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <!-- Componente Card -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-center text-primary mb-3">Inicio de Sesión</h2>
+                        <p class="card-text text-muted text-center mb-4">Por favor, ingrese sus credenciales para acceder a la plataforma.</p>
+
+                        <!-- Componente Formulario -->
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="email" class="form-label font-weight-bold">Correo electrónico</label>
+                                <input type="email" class="form-class form-control" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+                            </div>
+
+                            <div class="d-grid gap-2 mb-3">
+                                <button type="submit" class="btn btn-primary btn-lg">Iniciar Sesión</button>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <!-- Enlace para activar el Componente Modal -->
+                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#recuperarPasswordModal">
+                                ¿Olvidaste tu contraseña?
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Componente Modal para Recuperación de Contraseña -->
+    <div class="modal fade" id="recuperarPasswordModal" tabindex="-1" aria-labelledby="recuperarPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recuperarPasswordModalLabel">Recuperación de Contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ingresa tu correo electrónico registrado y te enviaremos las instrucciones para restablecer tu contraseña.</p>
+                    <input type="email" class="form-control" placeholder="ejemplo@correo.com">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Enviar instrucciones</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Sistema Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- 3. Carga de JS de Bootstrap 5.0 (Bundle incluye Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
